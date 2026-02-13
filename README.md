@@ -1,4 +1,4 @@
-# 🎓 Student Analyzer Web App
+# Student Analyzer Web App
 
 A web application for managing student results and predicting pass/fail outcomes using machine learning.
 
