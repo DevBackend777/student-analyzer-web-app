@@ -2,7 +2,7 @@
 
 A web application for managing student results and predicting pass/fail outcomes using machine learning.
 
-## 🚀 Features
+## Features
 - Add new students
 - Edit and delete students
 - Dashboard with class statistics
@@ -10,20 +10,20 @@ A web application for managing student results and predicting pass/fail outcomes
 - PASS/FAIL prediction using ML model
 - CSV-based data storage
 
-## 🛠 Technologies Used
+## Technologies Used
 - Python
 - Flask
 - HTML & CSS
 - Pandas
 - Scikit-learn
 
-## 📊 Dashboard Includes
+## Dashboard Includes
 - Total number of students
 - Class average score
 - Best student
 - PASS / FAIL statistics
 
-## ▶️ Run Locally
+## Run Locally
 ```bash
 pip install -r requirements.txt
 python app.py
