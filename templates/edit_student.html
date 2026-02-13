@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Student</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>Edit Student</h1>
+
+    <div class="form">
+        <form method="POST" action="{{ url_for('edit_student', index=index) }}">
+
+            <label>Name:</label><br>
+            <input type="text" name="name" value="{{ student[0] }}" required><br><br>
+
+            <label>Math:</label><br>
+            <input type="number" name="math" value="{{ student[1] }}" required><br><br>
+
+            <label>English:</label><br>
+            <input type="number" name="english" value="{{ student[2] }}" required><br><br>
+
+            <label>Science:</label><br>
+            <input type="number" name="science" value="{{ student[3] }}" required><br><br>
+
+            <button type="submit">Save changes</button>
+
+        </form>
+    </div>
+
+</body>
+</html>

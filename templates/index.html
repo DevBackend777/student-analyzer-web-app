@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>Student Analyzer</title>
+        <link rel="stylesheet" href="../static/style.css">
+    </head>
+
+    <body>
+
+        <div class="container">
+            <h1>Student analyzer app</h1>
+
+            <h2>Students table</h2>
+            <button class="add">Add student</button>
+
+            <div class="dashboard">
+                <div class="card">
+                    <h3>Students</h3>
+                    <p>{{ count }}</p>
+                </div>
+
+                <div class="card">
+                    <h3>Class average</h3>
+                    <p>{{ class_avg }}</p>
+                </div>
+
+                <div class="card">
+                    <h3>Best student</h3>
+                    <p>{{ best_student }}</p>
+                </div>
+
+                <div class="card">
+                    <h3>Pass / Fail</h3>
+                    <p>{{ pass_count }} / {{ fail_count }}</p>
+                </div>
+
+                <div class="card">
+                    <h3>AI prediction</h3>
+                    <p>{{ prediction }}</p>
+                </div>
+            </div>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Math</th>
+                        <th>English</th>
+                        <th>Science</th>
+                        <th>Average</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for student in students %}
+                    <tr>
+                        <td>{{ student[0] }}</td>
+                        <td>{{ student[1] }}</td>
+                        <td>{{ student[2] }}</td>
+                        <td>{{ student[3] }}</td>
+                        <td>{{ student[4] }}</td>
+                        <td>{{ student[5] }}</td>
+                        <td>
+                            <a href="/delete/{{ loop.index0 }}">Delete</a>
+                            <a href="/edit/{{ loop.index0 }}">Edit</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        
+    </body>
+</html>
